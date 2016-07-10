@@ -6,7 +6,7 @@ def tweet():
 	print 'Time to tweet.'
 	os.system('python app/main.py')
 
-schedule.every().day.at('08:00').do(job)
+schedule.every().day.at('08:00').do(tweet)
 
 while True:
 	schedule.run_pending()
