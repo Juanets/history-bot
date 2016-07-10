@@ -25,9 +25,10 @@ class Events():
 							   'ul', class_='event-list event-list--with-advert'
 							   ).find_all('li')				
 
-		for ev in events_html:
-			f_event = self.format(ev.text)
-			if len(f_event) < 140: events.append(f_event) 
+		for e in events_html:
+			f_event = self.format(e.text)
+			if len(f_event) < 140: 
+				events.append(f_event) 
 
 		return events
 	
